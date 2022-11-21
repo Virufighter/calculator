@@ -10,8 +10,12 @@ public class calculator {
     public int mul(int a,int b){
         return a*b;
     }
-    public int div(int a,int b){
-        return a/b;
+    public void div(int a,int b){
+        try {
+            System.out.println(a / b);
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     public static void main(String[] args) {
@@ -20,7 +24,7 @@ public class calculator {
         int i=1;
         while(i==1){
             System.out.println("1.add");
-            System.out.println("2.substraction");
+            System.out.println("2.subtraction");
             System.out.println("3.multiplication");
             System.out.println("4.division");
             System.out.println("5.exit");
@@ -37,7 +41,7 @@ public class calculator {
                     break;
                 case 3: System.out.println(c.mul(a,b));;
                     break;
-                case 4: System.out.println(c.div(a,b));;
+                case 4: c.div(a,b);
                     break;
                 default:
                     System.out.println("invalid choice");
